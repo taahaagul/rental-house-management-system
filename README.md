@@ -3,15 +3,44 @@
 ### 1. Veritabanı Kurulumu (Docker Kullanarak)
 Projenin veritabanı bağımlılığını (MySQL) başlatmak için projenin ana dizininde aşağıdaki komutu çalıştırın:
 ```bash
-
 docker compose up -d
+```
+
+### 2. Uygulamayı Çalıştırma
+Projeyi derlemek ve çalıştırmak için:
+```bash
+./mvnw spring-boot:run
+```
+
+Uygulama varsayılan olarak `http://localhost:8080` adresinde çalışacaktır.
+
+### 3. Web Arayüzü
+Proje, tüm veritabanı işlemlerini test etmek için modern bir web arayüzü içermektedir. 
+
+#### Özellikler:
+- **4 Ana Modül**: Kiracılar, Ev Sahipleri, Evler ve Kiralamalar için ayrı yönetim panelleri
+- **Tam CRUD İşlemleri**: Tüm modüller için oluşturma, okuma, güncelleme ve silme işlemleri
+- **Kiralama Yönetimi**: Yeni kiralama başlatma ve aktif kiralamaları sonlandırma
+- **Dinamik Formlar**: Modal tabanlı kullanıcı dostu formlar
+- **Gerçek Zamanlı Güncellemeler**: İşlem sonrası otomatik liste yenileme
+- **Responsive Tasarım**: Mobil ve masaüstü uyumlu modern arayüz
+
+#### Kullanım:
+Uygulama çalışırken tarayıcınızda şu adrese gidin:
+```
+http://localhost:8080
+```
+
+Web arayüzü tüm REST API endpoint'lerini kullanarak veritabanı işlemlerini gerçekleştirir. Swagger UI dokümantasyonuna erişmek için:
+```
+http://localhost:8080/swagger-ui/index.html
 ```
 
 ## Database Scheme
 
 ![Rental Management System ERD](rental_management_system_schema.png)
 
-### 2. Database Schema (CREATE TABLE Scripts)
+### 4. Database Schema (CREATE TABLE Scripts)
 
 #### House
 ```sql
@@ -67,7 +96,7 @@ CREATE TABLE IF NOT EXISTS Leases (" +
 ```
 
 
-### 3. Database Operations Scripts
+### 5. Database Operations Scripts
 #### Houses
 ```sql
 INSERT INTO Houses (landlord_id, address, city, zip_code, monthly_rent, number_of_rooms, is_available, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
