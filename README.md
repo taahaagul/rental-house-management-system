@@ -52,7 +52,7 @@ http://localhost:8080/swagger-ui/index.html
 ```
 
 ## Database ER Diagram
-![Rental Management System ERD](ER-diagram.drawio)
+<a href="ER-diagram.drawio" download="ER-diagram.drawio"> dowload ER-diagram.drawio </a>
 ![Rental Management System ERD](ER-diagram.png)
 
 ## Database Scheme
