@@ -52,7 +52,7 @@ http://localhost:8080/swagger-ui/index.html
 ```
 
 ## Database ER Diagram
-<a href="ER-diagram.drawio" download="ER-diagram.drawio"> dowload ER-diagram.drawio </a>
+[Rental House Management System ERD Dosyasını İndir (draw.io)](https://github.com/taahaagul/rental-house-management-system/raw/main/ER-diagram.drawio)
 ![Rental Management System ERD](ER-diagram.png)
 
 ## Database Scheme
